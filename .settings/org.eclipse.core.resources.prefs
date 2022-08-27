@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//src/main/webapp/admin_course.jsp=UTF-8
+encoding//src/main/webapp/admindashboard.jsp=UTF-8
+encoding//src/main/webapp/createannouncement.jsp=UTF-8
+encoding//src/main/webapp/createclassform.jsp=UTF-8
+encoding//src/main/webapp/createstudent.jsp=UTF-8
+encoding//src/main/webapp/createteacherform.jsp=UTF-8
+encoding//src/main/webapp/deleteclassform.jsp=UTF-8
+encoding//src/main/webapp/deletestudentform.jsp=UTF-8
+encoding//src/main/webapp/deleteteacherform.jsp=UTF-8
+encoding//src/main/webapp/studentenrolled.jsp=UTF-8
+encoding//src/main/webapp/studentnotenrolled.jsp=UTF-8
+encoding//src/main/webapp/teacherenrolled.jsp=UTF-8
+encoding//src/main/webapp/teachernotenrolled.jsp=UTF-8

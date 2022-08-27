@@ -1,0 +1,464 @@
+@charset "ISO-8859-1";
+*{
+    box-sizing: border-box;
+}
+html, body {
+    overflow-x: hidden;
+    height: 100%;
+}
+body {
+  font-family: 'Varela Round', sans-serif;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    background-image: url('kj.png');
+    height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(kj.png);
+	background-position: center;
+	background-size: cover;
+	/* position: absolute; */
+}
+
+.menu-odd{
+  background-color: red;
+}
+
+.AddTeacher{
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* opacity: 0.7; */
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.TeacherForm{
+  width: 500px;
+  height: 370px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.CloseAddNewTeacher{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+
+.RemoveTeacher{
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* opacity: 0.7; */
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.RemoveTeacherForm{
+  width: 500px;
+  height: 320px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.RemoveTeacherClose{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+
+.AddStudent{
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* opacity: 0.7; */
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.StudentForm{
+  width: 500px;
+  height: 400px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.CloseAddNewStudent{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.RemoveStudent{
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* opacity: 0.7; */
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.RemoveStudentForm{
+  width: 500px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+.RemoveStudentClose{
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+
+.CreateAnnouncement{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* opacity: 0.7; */
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.AnnouncementForm{
+    width: 500px;
+    height: 370px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+.aclose{
+    position: absolute;
+    top: 0;
+    right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+#announce{
+    height: 40px;
+    width: 450px;
+    border-radius: 5px;
+}
+
+input{
+    width: 50%;
+    display: block;
+    margin: 15px auto;
+}
+
+h1{
+    text-align: center;
+    padding-top: 30px;
+}
+.header {
+    /* background-color: #06460c; */
+    background-color: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4));
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    z-index: 10;
+}
+.main {
+    height: 100%;
+    margin-top: 60px;
+    padding: 10px 50px;
+}
+#sidebarMenu {
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(-250px);
+    transition: transform 250ms ease-in-out;
+    /* background: #2e86de; */
+    background-color: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0,0,0,0.4));
+}
+.menu{
+  list-style: none;
+    margin:0;
+    padding:0;
+    background:#000000
+}
+.menu li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.menu li a{
+    color: #fff;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+#openSidebarMenu:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input#openSidebarMenu{
+    display: none;
+}
+.sidebarIconToggle {
+  height: 22px;
+    width: 22px;
+    position: absolute;
+    z-index: 99;
+    top: 22px;
+    left: 15px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.spinner {
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.spinner.middle ,
+.spinner.bottom{
+    margin-top: 3px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle {
+    opacity: 0;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+
+
+
+
+/* nav */
+
+.content{
+    padding:0;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+}
+.content {
+  background: transparent;
+  color: #efedef;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  line-height: 1.6em;
+  margin: 0;
+  padding: 100px; 
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none; }
+
+.tabs {
+  display: block;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0;
+  overflow: hidden; }
+  .tabs [class^="tab"] label,
+  .tabs [class*=" tab"] label {
+    color: #efedef;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1em;
+    padding: 2rem 0;
+    text-align: center; }
+  .tabs [class^="tab"] [type="radio"],
+  .tabs [class*=" tab"] [type="radio"] {
+    border-bottom: 1px solid rgba(239, 237, 239, 0.5);
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: block;
+    width: 100%;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
+    .tabs [class^="tab"] [type="radio"]:hover, .tabs [class^="tab"] [type="radio"]:focus,
+    .tabs [class*=" tab"] [type="radio"]:hover,
+    .tabs [class*=" tab"] [type="radio"]:focus {
+      border-bottom: 1px solid #fd264f; }
+    .tabs [class^="tab"] [type="radio"]:checked,
+    .tabs [class*=" tab"] [type="radio"]:checked {
+      border-bottom: 2px solid #fd264f; }
+    .tabs [class^="tab"] [type="radio"]:checked + div,
+    .tabs [class*=" tab"] [type="radio"]:checked + div {
+      opacity: 1; }
+    .tabs [class^="tab"] [type="radio"] + div,
+    .tabs [class*=" tab"] [type="radio"] + div {
+      display: block;
+      opacity: 0;
+      padding: 2rem 0;
+      width: 90%;
+      -webkit-transition: all 0.7s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out; }
+  .tabs .tab-2 {
+    width: 50%; }
+    .tabs .tab-2 [type="radio"] + div {
+      width: 200%;
+      margin-left: 200%; }
+    .tabs .tab-2 [type="radio"]:checked + div {
+      margin-left: 0; }
+    .tabs .tab-2:last-child [type="radio"] + div {
+      margin-left: 100%; }
+    .tabs .tab-2:last-child [type="radio"]:checked + div {
+      margin-left: -100%; }
+
+img {max-width: 100%;}
+		.inbox_msg {
+		  border: 1px solid #c4c4c4;
+		  clear: both;
+		  overflow: hidden;
+		}
+		.top_spac{ margin: 20px 0 0;}
+
+
+		.recent_heading {float: left; width:40%;}
+
+		.headind_srch{ padding:10px 29px 10px 20px; overflow:hidden; border-bottom:1px solid #c4c4c4;}
+
+		.recent_heading h4 {
+		  color: #05728f;
+		  font-size: 21px;
+		  margin: auto;
+		}
+
+		.chat_ib h5{ font-size:15px; color:#464646; margin:0 0 8px 0;}
+		.chat_ib h5 span{ font-size:13px; float:right;}
+		.chat_ib p{ font-size:14px; color:#989898; margin:auto}
+		.chat_img {
+		  float: left;
+		  width: 11%;
+		}
+		.chat_ib {
+		  float: left;
+		  padding: 0 0 0 15px;
+		  width: 88%;
+		}
+
+		.chat_people{ overflow:hidden; clear:both;}
+		.chat_list {
+		  border-bottom: 1px solid #c4c4c4;
+		  margin: 0;
+		  padding: 18px 16px 10px;
+		}
+		.inbox_chat { height: 550px; overflow-y: scroll;}
+
+		.active_chat{ background:#ebebeb;}
+
+		.incoming_msg_img {
+		  display: inline-block;
+		  width: 6%;
+		}
+		.received_msg {
+		  display: inline-block;
+		  padding: 0 0 0 10px;
+		  vertical-align: top;
+		  width: 92%;
+		 }
+		 .received_withd_msg p {
+		  background:rgba(0,0,0,0.7);
+		  border-radius: 3px;
+		  color: white;
+		  font-size: 14px;
+		  margin: 0;
+		  padding: 5px 10px 5px 12px;
+		  width: 100%;
+		}
+		.time_date {
+		  color: #747474;
+		  display: block;
+		  font-size: 10px;
+		  margin: 3px 0 0;
+		}
+		.announcer {
+		  color: #747474;
+		  display: block;
+		  font-size: 13px;
+		  margin: 3px 0 0;
+		  width:100%;
+		}
+		.mesgs {
+		  float: left;
+		  padding: 40px;
+      /* background: rgba(0,0,0,0.7); */
+      border-radius: 15px;
+		}
+		.messaging { background: #fff;}
+
+#panno {
+  height: auto;
+  width: auto;
+  background: rgba(0,0,0,0.7);
+  border-radius: 15px;
+  color: #fff;
+}
